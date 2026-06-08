@@ -1,0 +1,13 @@
+Coloque aqui os arquivos da base CysticFibrosis2 (disponivel no Moodle):
+
+    cfquery.xml      (consultas, formato cfc2-query.dtd)
+    cf74.xml
+    cf75.xml
+    cf76.xml
+    cf77.xml
+    cf78.xml
+    cf79.xml         (documentos, formato cfc2.dtd)
+
+Em seguida, a partir da raiz do repositorio, rode:
+
+    python SRC/run_all.py

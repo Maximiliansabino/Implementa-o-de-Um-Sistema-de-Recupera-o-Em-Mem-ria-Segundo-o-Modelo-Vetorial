@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE ROOT SYSTEM "cfc2.dtd">
+<RECORD>
+<PAPERNUM>1</PAPERNUM>
+<RECORDNUM>00000001</RECORDNUM>
+<TITLE>Calcium and mucus in cystic fibrosis</TITLE>
+<ABSTRACT>
+The effects of calcium on the mucus of patients with cystic fibrosis were studied.
+Calcium increases the viscosity of the mucus secreted by the patients.
+</ABSTRACT>
+</RECORD>
+<RECORD>
+<PAPERNUM>2</PAPERNUM>
+<RECORDNUM>00000002</RECORDNUM>
+<TITLE>Mucus viscosity</TITLE>
+<ABSTRACT>
+Mucus viscosity was measured in several cystic fibrosis patients.
+The mucus showed abnormal properties.
+</ABSTRACT>
+</RECORD>
+<RECORD>
+<PAPERNUM>3</PAPERNUM>
+<RECORDNUM>00000003</RECORDNUM>
+<TITLE>Calcium effects on viscosity</TITLE>
+<EXTRACT>
+Calcium has strong effects on the viscosity of mucus.
+The effects of calcium were measured in mucus samples.
+</EXTRACT>
+</RECORD>
+<RECORD>
+<PAPERNUM>4</PAPERNUM>
+<RECORDNUM>00000004</RECORDNUM>
+<TITLE>Lung infection</TITLE>
+<ABSTRACT>
+Lung infection is a common complication in cystic fibrosis patients.
+Bacterial infection of the lung damages the respiratory system.
+</ABSTRACT>
+</RECORD>

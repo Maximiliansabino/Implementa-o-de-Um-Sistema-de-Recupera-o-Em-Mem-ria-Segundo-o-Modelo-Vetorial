@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE QUERIES SYSTEM "cfc2-query.dtd">
+<QUERY>
+<QueryNumber>00001</QueryNumber>
+<QueryText>
+What are the effects of calcium on the mucus of cystic fibrosis patients?
+</QueryText>
+<Results>3</Results>
+<Records>
+<Item score="2200">1</Item>
+<Item score="1100">3</Item>
+<Item score="0000">4</Item>
+</Records>
+</QUERY>
+<QUERY>
+<QueryNumber>00002</QueryNumber>
+<QueryText>
+Lung infection in patients with cystic fibrosis.
+</QueryText>
+<Results>1</Results>
+<Records>
+<Item score="2120">4</Item>
+</Records>
+</QUERY>

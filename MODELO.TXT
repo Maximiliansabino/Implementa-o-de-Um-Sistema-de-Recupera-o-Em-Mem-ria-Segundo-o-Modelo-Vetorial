@@ -1,0 +1,94 @@
+================================================================================
+ DESCRICAO DO FORMATO DO MODELO VETORIAL
+ Sistema de Recuperacao em Memoria - Modelo Vetorial
+================================================================================
+
+O modelo e gerado pelo modulo Indexador (indexador.py) a partir da lista
+invertida simples e e gravado pela instrucao ESCREVA do arquivo INDEX.CFG
+(por padrao: RESULT/modelo.pkl).
+
+--------------------------------------------------------------------------------
+1. FORMA DE ARMAZENAMENTO
+--------------------------------------------------------------------------------
+O modelo e serializado com o modulo "pickle" da biblioteca padrao do Python
+(pickle.HIGHEST_PROTOCOL). Trata-se de um unico dicionario Python.
+
+Justificativa: a estrutura e uma matriz termo-documento ESPARSA (a grande
+maioria dos pares termo-documento tem peso zero). Armazenar apenas os pesos
+nao-nulos como dicionarios aninhados e muito mais compacto do que uma matriz
+densa e e carregado diretamente em memoria pelo Buscador, sem reprocessamento.
+
+--------------------------------------------------------------------------------
+2. ESTRUTURA DO DICIONARIO
+--------------------------------------------------------------------------------
+modelo = {
+
+  'esquema_tf' : str
+        Esquema de ponderacao do componente tf usado na indexacao.
+        Valores possiveis: 'log' (padrao), 'raw' ou 'bin'.
+
+  'termos' : list[str]
+        Vocabulario: lista ORDENADA de todos os termos do modelo.
+        Cada termo tem 2+ letras, apenas letras, em MAIUSCULAS ASCII (A-Z).
+
+  'documentos' : list[int]
+        Lista ORDENADA dos identificadores (RECORDNUM) de todos os documentos.
+
+  'idf' : dict[str, float]
+        Frequencia inversa de documento de cada termo:
+            idf(t) = log10( N / df(t) )
+        onde N = numero total de documentos e df(t) = numero de documentos
+        em que o termo t ocorre.
+
+  'pesos' : dict[str, dict[int, float]]
+        Matriz termo-documento ESPARSA com os pesos tf/idf.
+        pesos[termo][docid] = peso_tfidf(termo, docid)
+        Somente pares com peso diferente de zero sao armazenados.
+        O peso e calculado como:
+            w(t,d) = f_tf( tf(t,d) ) * idf(t)
+        com f_tf dependente de 'esquema_tf':
+            'log' : f_tf(tf) = 1 + log10(tf)      (padrao)
+            'raw' : f_tf(tf) = tf
+            'bin' : f_tf(tf) = 1
+
+  'normas' : dict[int, float]
+        Norma euclidiana do vetor de cada documento:
+            ||d|| = sqrt( soma_t  w(t,d)^2 )
+        Pre-calculada para acelerar a similaridade do cosseno no Buscador.
+}
+
+--------------------------------------------------------------------------------
+3. USO NA BUSCA (modulo Buscador)
+--------------------------------------------------------------------------------
+A consulta e representada por um vetor binario: cada palavra distinta da
+consulta presente no vocabulario recebe peso 1.
+
+A similaridade entre a consulta q e um documento d e o cosseno:
+
+        sim(q,d) =  ( q . d )  /  ( ||q|| * ||d|| )
+
+onde:
+    q . d   = soma, sobre os termos da consulta, de 1 * w(t,d)
+    ||q||   = sqrt( numero de termos distintos da consulta no vocabulario )
+    ||d||   = modelo['normas'][d]
+
+Os documentos sao ordenados por similaridade decrescente (desempate pelo menor
+id de documento), gerando as trincas (posicao_no_ranking, id_documento,
+distancia) no arquivo de resultados.
+
+--------------------------------------------------------------------------------
+4. EXEMPLO MINIMO (ilustrativo)
+--------------------------------------------------------------------------------
+modelo = {
+  'esquema_tf': 'log',
+  'termos': ['CALCIUM', 'FIBROSIS', 'MUCUS'],
+  'documentos': [1, 2, 3],
+  'idf': {'CALCIUM': 0.176, 'FIBROSIS': 0.0, 'MUCUS': 0.176},
+  'pesos': {
+      'CALCIUM' : {1: 0.176, 3: 0.229},
+      'FIBROSIS': {},                       # ocorre em todos -> idf 0
+      'MUCUS'   : {2: 0.176, 3: 0.176},
+  },
+  'normas': {1: 0.176, 2: 0.176, 3: 0.289},
+}
+================================================================================
