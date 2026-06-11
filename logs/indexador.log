@@ -1,0 +1,13 @@
+2026-06-11 01:40:46 | indexador              | INFO    | === INICIO do Indexador (Modelo Vetorial tf/idf) ===
+2026-06-11 01:40:46 | indexador              | INFO    | Lendo arquivo de configuracao: C:\Users\MAX\Downloads\UFRJ\COS Xexéo\Sistema de recuperação em Memória segundo o modelo vetorial\Implementação de Um Sistema de Recuperação Em Memória Segundo o Modelo Vetorial\SRC\INDEX.CFG
+2026-06-11 01:40:46 | indexador              | INFO    | Configuracao lida: 3 instrucao(oes)
+2026-06-11 01:40:46 | indexador              | INFO    | Esquema de tf escolhido: log
+2026-06-11 01:40:46 | indexador              | INFO    | Lendo lista invertida: RESULT/lista_invertida.csv
+2026-06-11 01:40:46 | indexador              | INFO    | Lista invertida lida: 9383 termo(s), 1215 documento(s) em 0.391s
+2026-06-11 01:40:46 | indexador              | INFO    | Calculando idf e pesos tf/idf...
+2026-06-11 01:40:46 | indexador              | INFO    | Modelo construido em 0.042s
+2026-06-11 01:40:46 | indexador              | INFO    | Salvando modelo em: RESULT/modelo.pkl
+2026-06-11 01:40:46 | indexador              | INFO    | Termos (vocabulario): 9383
+2026-06-11 01:40:46 | indexador              | INFO    | Documentos no modelo: 1215
+2026-06-11 01:40:46 | indexador              | INFO    | Tempo medio de processamento por termo/palavra: 0.0000043s
+2026-06-11 01:40:46 | indexador              | INFO    | === FIM do Indexador em 0.458s ===

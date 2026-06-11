@@ -1,0 +1,9 @@
+2026-06-11 01:40:45 | processador_consultas  | INFO    | === INICIO do Processador de Consultas ===
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Lendo arquivo de configuracao: C:\Users\MAX\Downloads\UFRJ\COS Xexéo\Sistema de recuperação em Memória segundo o modelo vetorial\Implementação de Um Sistema de Recuperação Em Memória Segundo o Modelo Vetorial\SRC\PC.CFG
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Configuracao lida: 3 instrucao(oes)
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Lendo arquivo de consultas (XML): data/cfquery.xml
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Dados lidos: 99 consulta(s) em 0.006s
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Arquivo CONSULTAS gerado: RESULT/consultas.csv (99 consultas)
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Arquivo ESPERADOS gerado: RESULT/esperados.csv (4820 pares consulta-documento)
+2026-06-11 01:40:45 | processador_consultas  | INFO    | Tempo medio de processamento por consulta: 0.00009s
+2026-06-11 01:40:45 | processador_consultas  | INFO    | === FIM do Processador de Consultas em 0.026s ===

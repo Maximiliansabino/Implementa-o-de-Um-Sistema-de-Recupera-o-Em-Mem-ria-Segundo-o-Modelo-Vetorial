@@ -1,0 +1,22 @@
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | === INICIO do Gerador de Lista Invertida ===
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de configuracao: C:\Users\MAX\Downloads\UFRJ\COS Xexéo\Sistema de recuperação em Memória segundo o modelo vetorial\Implementação de Um Sistema de Recuperação Em Memória Segundo o Modelo Vetorial\SRC\GLI.CFG
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Configuracao lida: 7 instrucao(oes)
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de dados (XML): data/cf74.xml
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    |   167 registro(s) lidos em 0.065s
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de dados (XML): data/cf75.xml
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    |   188 registro(s) lidos em 0.021s
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de dados (XML): data/cf76.xml
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    |   227 registro(s) lidos em 0.083s
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de dados (XML): data/cf77.xml
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    |   199 registro(s) lidos em 0.034s
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de dados (XML): data/cf78.xml
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    |   199 registro(s) lidos em 0.018s
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    | Lendo arquivo de dados (XML): data/cf79.xml
+2026-06-11 01:40:45 | gerador_lista_invertida | INFO    |   259 registro(s) lidos em 0.023s
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | Escrevendo lista invertida em: RESULT/lista_invertida.csv
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | Documentos processados: 1239
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | Palavras (ocorrencias) processadas: 157225
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | Termos distintos na lista invertida: 9383
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | Tempo medio por documento: 0.00049s
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | Tempo medio por palavra: 0.0000038s
+2026-06-11 01:40:46 | gerador_lista_invertida | INFO    | === FIM do Gerador de Lista Invertida em 0.892s ===

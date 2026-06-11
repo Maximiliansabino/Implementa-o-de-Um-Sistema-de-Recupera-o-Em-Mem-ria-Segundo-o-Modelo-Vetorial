@@ -1,0 +1,11 @@
+2026-06-11 01:40:46 | buscador               | INFO    | === INICIO do Buscador (Modelo Vetorial) ===
+2026-06-11 01:40:46 | buscador               | INFO    | Lendo arquivo de configuracao: C:\Users\MAX\Downloads\UFRJ\COS Xexéo\Sistema de recuperação em Memória segundo o modelo vetorial\Implementação de Um Sistema de Recuperação Em Memória Segundo o Modelo Vetorial\SRC\BUSCA.CFG
+2026-06-11 01:40:46 | buscador               | INFO    | Configuracao lida: 3 instrucao(oes)
+2026-06-11 01:40:46 | buscador               | INFO    | Lendo modelo: RESULT/modelo.pkl
+2026-06-11 01:40:46 | buscador               | INFO    | Modelo carregado: 9383 termos, 1215 documentos
+2026-06-11 01:40:46 | buscador               | INFO    | Lendo consultas: RESULT/consultas.csv
+2026-06-11 01:40:46 | buscador               | INFO    | Consultas lidas: 99
+2026-06-11 01:40:46 | buscador               | INFO    | Resultados gravados em: RESULT/RESULTADOS.csv
+2026-06-11 01:40:46 | buscador               | INFO    | Consultas processadas: 99
+2026-06-11 01:40:46 | buscador               | INFO    | Tempo medio de processamento por consulta: 0.00274s
+2026-06-11 01:40:46 | buscador               | INFO    | === FIM do Buscador em 0.351s ===
